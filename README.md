@@ -7,6 +7,7 @@
 ### Clear out unused tags
 
 ```DELETE FROM wp_terms WHERE term_id IN (SELECT term_id FROM wp_term_taxonomy WHERE count = 0 );```
+
 ```DELETE FROM wp_term_relationships WHERE term_taxonomy_id not IN (SELECT term_taxonomy_id FROM wp_term_taxonomy);```
 
 ### Clear posst meta not use
@@ -33,6 +34,7 @@ DELETE a,b,c
 ### Remove Pingbacks and Trackbacks
 
 ```DELETE FROM wp_comments WHERE comment_type = 'pingback';```
+
 ```DELETE FROM wp_comments WHERE comment_type = 'trackback';```
 
 ### Delete any orphaned commentmeta
