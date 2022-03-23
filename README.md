@@ -48,3 +48,19 @@ DELETE a,b,c
 ### Delete expired transients:
 
 ```DELETE FROM `wp_options` WHERE `option_name` LIKE ('%_transient_%')```
+
+### Delete Feed Cache
+
+```DELETE FROM `wp_options` WHERE `option_name` LIKE ('_transient%_feed_%')```
+
+### Batch Delete Old Posts
+
+```
+DELETE FROM `wp_posts`
+WHERE `post_type` = 'post'
+AND DATEDIFF(NOW(), `post_date`) > 600
+```
+
+### Remove Comment Agent
+
+```UPDATE wp_comments set comment_agent ='' ;```
