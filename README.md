@@ -19,6 +19,15 @@ LEFT JOIN wp_posts wp ON wp.ID = pm.post_id
 WHERE wp.ID IS NULL
 ```
 
+### Clear order items not use
+
+```
+DELETE ois
+FROM wp_woocommerce_order_items ois
+LEFT JOIN wp_posts wp ON wp.ID = ois.order_id
+WHERE wp.ID IS NULL
+```
+
 ### Delete Post Revisions
 
 ```
