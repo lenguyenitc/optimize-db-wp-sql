@@ -73,3 +73,7 @@ AND DATEDIFF(NOW(), `post_date`) > 600
 ### Remove Comment Agent
 
 ```UPDATE wp_comments set comment_agent ='' ;```
+
+### Remove Usermeta
+
+```DELETE um FROM wp_usermeta um LEFT JOIN wp_users u ON u.ID = um.umeta_id WHERE u.ID IS NULL```
