@@ -22,7 +22,7 @@ Look for specific patterns that may indicate malicious code:
 ```
 sudo grep -r '$fpn = "f"."o"."p"."e"."n";' .
 ```
-## 4. Monitor Processes
+## 5. Monitor Processes
 Look for suspicious processes, especially ones involving network connections or backdoors.
 ```
 ps aux | grep 'nc'
