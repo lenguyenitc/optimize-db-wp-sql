@@ -1,4 +1,7 @@
-#1 check cron
-#2 check permission ```ls -l```
-#3 check latest file created/update ```sudo find . -name '*.php' -mtime -1 -type f -printf '%TY-%Tm-%Td %TH:%TM %p\n' | sort -r```
-#4 find malware code: ```sudo grep -r '$fpn = "f"."o"."p"."e"."n";' . ```
+# Steps to Check and Remove Malicious Cron Jobs
+
+## 1. Check Cron Jobs
+Review the system and user-specific cron jobs for any unauthorized entries:
+```bash
+crontab -l
+sudo crontab -l
