@@ -9,10 +9,16 @@ sudo crontab -l
 ```
 ## 2. Check File Permissions
 Verify file and directory permissions to ensure there are no misconfiguration:
-```ls -l```
+```
+ls -l
+```
 ## 3. Check Recently Created/Updated Files
 Find PHP files created or modified in the last day:
-```sudo find . -name '*.php' -mtime -1 -type f -printf '%TY-%Tm-%Td %TH:%TM %p\n' | sort -r```
+```
+sudo find . -name '*.php' -mtime -1 -type f -printf '%TY-%Tm-%Td %TH:%TM %p\n' | sort -r
+```
 ## 4. Check Recently Created/Updated Files
 Look for specific patterns that may indicate malicious code:
-```sudo grep -r '$fpn = "f"."o"."p"."e"."n";' .```
+```
+sudo grep -r '$fpn = "f"."o"."p"."e"."n";' .
+```
